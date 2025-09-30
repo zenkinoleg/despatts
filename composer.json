@@ -1,0 +1,18 @@
+{
+    "name": "dzenchee/despatts",
+    "description": "Design Patterns in examples",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "olegz",
+            "email": "icis@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,9 +1,8 @@
 <?php
 
-use app\Behavioral\Strategy\Duck\CursingQuackStrategy;
-use app\Behavioral\Strategy\Duck\Duck;
-use app\Behavioral\Strategy\Duck\HighFlyStrategy;
-use app\Behavioral\Strategy\Duck\PoliteQuackStrategy;
+namespace App\Behavioral\Strategy\Duck;
+
+require 'c:/web/despatts/vendor/autoload.php';
 
 $goodDuck = new Duck(
     new PoliteQuackStrategy,
@@ -11,6 +10,8 @@ $goodDuck = new Duck(
 );
 $goodDuck->meet();
 $goodDuck->repel();
+
+echo PHP_EOL;
 
 $evilDuck = new Duck(
     new CursingQuackStrategy,

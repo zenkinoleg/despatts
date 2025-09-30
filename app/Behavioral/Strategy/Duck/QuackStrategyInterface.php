@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Behavioral\Strategy\Duck;
+namespace App\Behavioral\Strategy\Duck;
 interface QuackStrategyInterface
 {
     public function quack(): void;
