@@ -2,6 +2,10 @@
 
 namespace App\Behavioral\Strategy\Duck;
 
+use App\Behavioral\Strategy\Duck\Flying\HighFlyStrategy;
+use App\Behavioral\Strategy\Duck\Quacking\CursingQuackStrategy;
+use App\Behavioral\Strategy\Duck\Quacking\PoliteQuackStrategy;
+
 require 'c:/web/despatts/vendor/autoload.php';
 
 $goodDuck = new Duck(

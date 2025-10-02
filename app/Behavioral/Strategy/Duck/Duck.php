@@ -2,11 +2,20 @@
 
 namespace App\Behavioral\Strategy\Duck;
 
+use App\Behavioral\Strategy\Duck\Flying\FlyStrategyInterface;
+use App\Behavioral\Strategy\Duck\Quacking\QuackStrategyInterface;
+
+/**
+ * A context class representing skeleton to build up the Duck upon.
+ * Having two silly methods to interact with a duck, just in order
+ * to demonstrate different behaviours based on abstract strategy
+ * and its separate implementations.
+ */
 readonly class Duck
 {
     public function __construct(
-        readonly private QuackStrategyInterface $quackStrategy,
-        readonly private FlyStrategyInterface $flyStrategy
+        private QuackStrategyInterface $quackStrategy,
+        private FlyStrategyInterface $flyStrategy
     )
     {
     }
@@ -21,7 +30,7 @@ readonly class Duck
     {
         echo 'Get outta here birdie' . PHP_EOL;
         $this->quackStrategy->panic();
-        echo 'I mean it. Get out! (Pushing it with the leg)' . PHP_EOL;
+        echo 'Shoosh shoosh, get out! (Pushing it with the leg)' . PHP_EOL;
         $this->flyStrategy->fly();
     }
 }

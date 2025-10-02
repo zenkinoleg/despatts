@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Behavioral\Strategy\Duck;
+namespace App\Behavioral\Strategy\Duck\Flying;
 
 interface FlyStrategyInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Behavioral\Strategy\Duck;
+namespace App\Behavioral\Strategy\Duck\Quacking;
 
 class PoliteQuackStrategy implements QuackStrategyInterface
 {
