@@ -8,7 +8,7 @@ use App\Behavioral\Strategy\Duck\Quacking\CursingQuackStrategy;
 use App\Behavioral\Strategy\Duck\Quacking\NoQuackStrategy;
 use App\Behavioral\Strategy\Duck\Quacking\PoliteQuackStrategy;
 
-require 'c:/web/despatts/vendor/autoload.php';
+require __DIR__ . '/../../../../vendor/autoload.php';
 
 $goodDuck = new Duck(
     new PoliteQuackStrategy,
