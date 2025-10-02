@@ -3,7 +3,9 @@
 namespace App\Behavioral\Strategy\Duck;
 
 use App\Behavioral\Strategy\Duck\Flying\HighFlyStrategy;
+use App\Behavioral\Strategy\Duck\Flying\NoFlyingStrategy;
 use App\Behavioral\Strategy\Duck\Quacking\CursingQuackStrategy;
+use App\Behavioral\Strategy\Duck\Quacking\NoQuackStrategy;
 use App\Behavioral\Strategy\Duck\Quacking\PoliteQuackStrategy;
 
 require 'c:/web/despatts/vendor/autoload.php';
@@ -23,3 +25,12 @@ $evilDuck = new Duck(
 );
 $evilDuck->meet();
 $evilDuck->repel();
+
+echo PHP_EOL;
+
+$rubberDuck = new Duck(
+    new NoQuackStrategy(),
+    new NoFlyingStrategy(),
+);
+$rubberDuck->meet();
+$rubberDuck->repel();
