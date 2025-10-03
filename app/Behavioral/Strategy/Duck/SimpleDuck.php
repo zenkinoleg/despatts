@@ -11,7 +11,7 @@ use App\Behavioral\Strategy\Duck\Quacking\QuackStrategyInterface;
  * to demonstrate different behaviours based on abstract strategy
  * and its separate implementations.
  */
-readonly class Duck
+readonly class SimpleDuck
 {
     public function __construct(
         private QuackStrategyInterface $quackStrategy,
@@ -20,12 +20,22 @@ readonly class Duck
     {
     }
 
+    /**
+     * Just say hey to a duck
+     * Single strategy involved
+     * @return void
+     */
     public function meet(): void
     {
         echo 'Hello ducky!' . PHP_EOL;
         $this->quackStrategy->quack();
     }
 
+    /**
+     * Two actions scenario, we're shooshing a duck first, then kicking it
+     * Two strategies involved with their own set of methods
+     * @return void
+     */
     public function repel(): void
     {
         echo 'Get outta here birdie' . PHP_EOL;

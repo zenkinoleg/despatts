@@ -10,7 +10,7 @@ use App\Behavioral\Strategy\Duck\Quacking\PoliteQuackStrategy;
 
 require __DIR__ . '/../../../../vendor/autoload.php';
 
-$goodDuck = new Duck(
+$goodDuck = new SimpleDuck(
     new PoliteQuackStrategy,
     new HighFlyStrategy,
 );
@@ -19,7 +19,7 @@ $goodDuck->repel();
 
 echo PHP_EOL;
 
-$evilDuck = new Duck(
+$evilDuck = new SimpleDuck(
     new CursingQuackStrategy,
     new HighFlyStrategy,
 );
@@ -28,7 +28,7 @@ $evilDuck->repel();
 
 echo PHP_EOL;
 
-$rubberDuck = new Duck(
+$rubberDuck = new SimpleDuck(
     new NoQuackStrategy(),
     new NoFlyingStrategy(),
 );
